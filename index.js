@@ -1,30 +1,19 @@
-/*const nomeCompleto = document.getElementById('name')
-const linhaNome = document.getElementById('linhaNome')
-const spanNome = document.getElementById('spanNome')
 
-
-  
-})
-
-nomeCompleto.addEventListener('input',e =>{
-
-    const nomeLength = e.target.value.length;
-    
-  
-
-    if(nomeLength > -1){
-        spanNome.innerText ='Ok'
-        spanNome.style.color = 'green'
-    }else{
-    }
-
-})*/
 
 const botao = document.getElementById('btn')
 
+const nome = document.getElementById('name')
+const cep = document.getElementById('cep')
+const data = document.getElementById('data-nascimento')
 const senha = document.getElementById('password')
 const spanSenha = document.getElementById('spanSenha')
 const linhaSenha = document.getElementById('linhaSenha')
+
+const btnLista = document.getElementById('btn-lista')
+const lista = document.querySelector('.cadastrados')
+const form = document.querySelector('form')
+const btnForm = document.getElementById('btn-form')
+
 
 senha.addEventListener('input', e => {
 
@@ -65,7 +54,24 @@ senha.addEventListener('input', e => {
 
 })
 
+
+
 botao.addEventListener('click', e=>{
+    
+
+})
+
+btnLista.addEventListener('click', e =>{
 
 
+
+    lista.style.display ='flex'
+    form.style.display ='none'
+
+
+})
+btnForm.addEventListener('click', e=>{
+  
+  lista.style.display ='none'
+  form.style.display ='flex'
 })

@@ -8,30 +8,32 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: auto;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    
+
     width: 50%;
 
 }
-.stiloInput{
+
+.stiloInput {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
 }
-.linha{
+
+.linha {
 
     height: 2px;
-    background: black;
+    background: 5px black;
 }
 
-label{
+label {
     margin-top: 25px;
     padding: 5px;
     font-family: 'Ropa Sans';
@@ -42,7 +44,7 @@ label{
     color: #888888;
 }
 
-input{
+input {
     flex: 1;
     font-size: 15px;
     padding: 5px;
@@ -60,4 +62,35 @@ span {
     font-size: 14px;
     line-height: 27px;
     color: #888888;
-  }
+}
+
+button {
+
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+
+    font-size: 25px;
+    background: gray;
+    border-radius: 25px;
+}
+
+button:hover {
+    background: rgb(7, 7, 7);
+    color: white;
+}
+
+
+.cadastrados {
+    width: 80%;
+    height: 500px;
+
+    display: none;
+    flex-direction: column;
+
+    border: 1px solid;
+}
+
+#btn-lista{
+   width: 250px;
+}
