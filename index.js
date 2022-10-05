@@ -4,16 +4,18 @@ const botao = document.getElementById('btn')
 
 const nome = document.getElementById('name')
 const cep = document.getElementById('cep')
+const email = document.getElementById('email')
 const data = document.getElementById('data-nascimento')
 const senha = document.getElementById('password')
 const spanSenha = document.getElementById('spanSenha')
 const linhaSenha = document.getElementById('linhaSenha')
 
 const btnLista = document.getElementById('btn-lista')
-const lista = document.querySelector('.cadastrados')
+var lista = document.querySelector('.cadastrados')
 const form = document.querySelector('form')
 const btnForm = document.getElementById('btn-form')
 
+let cadastrados =[]
 
 senha.addEventListener('input', e => {
 
@@ -57,7 +59,27 @@ senha.addEventListener('input', e => {
 
 
 botao.addEventListener('click', e=>{
-    
+        cadastrados.push({
+          "nome":nome.value, 
+          "email" : email.value,
+          "cep": cep.value,
+          "data": data.value,
+          "senha": senha.value
+        })
+        e.preventDefault()
+        let tr = document.createElement('tr');
+     for(let i =0; i< cadastrados.length;i++){
+
+       tr.innerHTML =`
+       <td>${cadastrados[i].nome}</td>
+       <td>${cadastrados[i].email}</td>
+       <td>${cadastrados[i].cep}</td>
+       <td>${cadastrados[i].data}</td>
+       <td>${cadastrados[i].senha}</td>`
+     }
+        
+        this.lista.appendChild(tr)
+        console.log(cadastrados)
 
 })
 
