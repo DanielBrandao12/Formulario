@@ -94,3 +94,13 @@ button:hover {
 #btn-lista{
    width: 250px;
 }
+
+tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid;
+    cursor: pointer;
+    
+}

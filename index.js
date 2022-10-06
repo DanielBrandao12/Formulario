@@ -14,6 +14,9 @@ const btnLista = document.getElementById('btn-lista')
 var lista = document.querySelector('.cadastrados')
 const form = document.querySelector('form')
 const btnForm = document.getElementById('btn-form')
+const editar = document.querySelector(".cadastrados")
+const salvar = document.getElementById('btn-Editar')
+
 
 let cadastrados =[]
 
@@ -79,8 +82,12 @@ botao.addEventListener('click', e=>{
      }
         
         this.lista.appendChild(tr)
-        console.log(cadastrados)
-
+       // console.log(cadastrados)
+       
+     
+    
+    
+     
 })
 
 btnLista.addEventListener('click', e =>{
@@ -89,7 +96,15 @@ btnLista.addEventListener('click', e =>{
 
     lista.style.display ='flex'
     form.style.display ='none'
-
+    editar.querySelectorAll('tr td').forEach(item=>{
+      console.log(item.addEventListener('dblclick', (valor)=>{
+        
+    
+       item.contentEditable = true
+        console.log(valor.target)
+   
+      }))
+    })
 
 })
 btnForm.addEventListener('click', e=>{
@@ -97,3 +112,13 @@ btnForm.addEventListener('click', e=>{
   lista.style.display ='none'
   form.style.display ='flex'
 })
+
+
+
+salvar.addEventListener('click', ()=>{
+
+
+ 
+  
+})
+
